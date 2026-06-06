@@ -1,0 +1,115 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    /* DRIP Brand Colors */
+    --gold: 45 65% 52%;
+    --gold-light: 45 65% 65%;
+    --cream: 36 52% 90%;
+    --dusty-blue: 207 25% 71%;
+    --charcoal: 0 0% 17%;
+    
+    --background: 36 52% 96%;
+    --foreground: 0 0% 17%;
+    --card: 0 0% 100%;
+    --card-foreground: 0 0% 17%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 0 0% 17%;
+    --primary: 45 65% 52%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 36 52% 90%;
+    --secondary-foreground: 0 0% 17%;
+    --muted: 36 30% 92%;
+    --muted-foreground: 0 0% 45%;
+    --accent: 207 25% 71%;
+    --accent-foreground: 0 0% 17%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 36 30% 85%;
+    --input: 36 30% 90%;
+    --ring: 45 65% 52%;
+    --radius: 0.75rem;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  html {
+    scroll-behavior: smooth;
+  }
+  body {
+    @apply bg-background text-foreground font-sans antialiased;
+    font-family: 'Inter', sans-serif;
+  }
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Playfair Display', serif;
+  }
+}
+
+@layer utilities {
+  .font-display {
+    font-family: 'Playfair Display', serif;
+  }
+  .font-body {
+    font-family: 'Inter', sans-serif;
+  }
+  .text-gold {
+    color: #D4AF37;
+  }
+  .bg-gold {
+    background-color: #D4AF37;
+  }
+  .bg-cream {
+    background-color: #F5E6D3;
+  }
+  .bg-dusty-blue {
+    background-color: #9CB4CC;
+  }
+  .border-gold {
+    border-color: #D4AF37;
+  }
+  .gradient-gold {
+    background: linear-gradient(135deg, #D4AF37 0%, #C9A227 50%, #B8941F 100%);
+  }
+  .gradient-cream {
+    background: linear-gradient(180deg, #F5E6D3 0%, #FFFFFF 100%);
+  }
+  .shadow-gold {
+    box-shadow: 0 4px 20px rgba(212, 175, 55, 0.25);
+  }
+  .shadow-soft {
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
+  }
+  .animate-pulse-slow {
+    animation: pulse 3s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+  }
+  .animate-spin-slow {
+    animation: spin 8s linear infinite;
+  }
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #F5E6D3;
+}
+::-webkit-scrollbar-thumb {
+  background: #D4AF37;
+  border-radius: 3px;
+}
+
+/* Mobile viewport fix */
+@supports (height: 100dvh) {
+  .min-h-screen {
+    min-height: 100dvh;
+  }
+}

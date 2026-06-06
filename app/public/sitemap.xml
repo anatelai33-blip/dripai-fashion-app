@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1"
+        xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
+        http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+  
+  <!-- Homepage -->
+  <url>
+    <loc>https://www.dripai.store</loc>
+    <lastmod>2024-01-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+    <image:image>
+      <image:loc>https://www.dripai.store/images/hq-awka.jpg</image:loc>
+      <image:title>DripAI Headquarters in Awka, Nigeria</image:title>
+      <image:caption>Modern tech company headquarters in Awka, Anambra State</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.dripai.store/logo.png</image:loc>
+      <image:title>DripAI Logo</image:title>
+    </image:image>
+  </url>
+  
+  <!-- About Page -->
+  <url>
+    <loc>https://www.dripai.store/about</loc>
+    <lastmod>2024-01-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+    <image:image>
+      <image:loc>https://www.dripai.store/images/hq-awka.jpg</image:loc>
+      <image:title>About DripAI - Our Headquarters</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.dripai.store/images/founder.jpg</image:loc>
+      <image:title>DripAI Founder</image:title>
+    </image:image>
+  </url>
+  
+  <!-- Services Page -->
+  <url>
+    <loc>https://www.dripai.store/services</loc>
+    <lastmod>2024-01-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+    <image:image>
+      <image:loc>https://www.dripai.store/images/apps-development.jpg</image:loc>
+      <image:title>Mobile App Development Services</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.dripai.store/images/commerce.jpg</image:loc>
+      <image:title>E-Commerce Solutions</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.dripai.store/images/web3.jpg</image:loc>
+      <image:title>Web3 and Blockchain Development</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.dripai.store/images/saas.jpg</image:loc>
+      <image:title>SaaS Product Development</image:title>
+    </image:image>
+  </url>
+  
+  <!-- Portfolio Page -->
+  <url>
+    <loc>https://www.dripai.store/portfolio</loc>
+    <lastmod>2024-01-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://www.dripai.store/images/usecase-fintech.jpg</image:loc>
+      <image:title>PaySwift - FinTech App</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.dripai.store/images/usecase-education.jpg</image:loc>
+      <image:title>LearnHub - E-Learning Platform</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.dripai.store/images/usecase-healthcare.jpg</image:loc>
+      <image:title>MedConnect - Telemedicine App</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.dripai.store/images/usecase-realestate.jpg</image:loc>
+      <image:title>LuxeMarket - E-Commerce Platform</image:title>
+    </image:image>
+  </url>
+  
+  <!-- Team Page -->
+  <url>
+    <loc>https://www.dripai.store/team</loc>
+    <lastmod>2024-01-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://www.dripai.store/images/founder.jpg</image:loc>
+      <image:title>DripAI Founder and CEO</image:title>
+    </image:image>
+  </url>
+  
+  <!-- Contact Page -->
+  <url>
+    <loc>https://www.dripai.store/contact</loc>
+    <lastmod>2024-01-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://www.dripai.store/images/hq-awka.jpg</image:loc>
+      <image:title>Contact DripAI - Visit Our Headquarters</image:title>
+    </image:image>
+  </url>
+  
+</urlset>
