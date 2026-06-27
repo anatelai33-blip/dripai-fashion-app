@@ -1,6 +1,6 @@
 import React, { createContext, useContext, useState, useCallback, useEffect } from 'react';
 import type { Product, CartItem, User, Measurements, Screen } from '@/types';
-import { AuthService, ProductService, CartService, FavoritesService, TryOnService, MeasurementsService } from '@/services';
+import { AuthService, ProductService, CartService, FavoritesService, TryOnService, MeasurementsService, ShopifyService } from '@/services';
 
 interface AppContextType {
   // Navigation
@@ -177,7 +177,7 @@ export function AppProvider({ children }: { children: React.ReactNode }) {
   // Product functions
   const fetchProducts = async (options?: any) => {
     try {
-      const { products: fetchedProducts } = await ProductService.getProducts(options);
+      const fetchedProducts = await ShopifyService.getProducts(options?.limit, options?.searchQuery);
       setProducts(fetchedProducts);
     } catch (error) {
       console.error('Error fetching products:', error);

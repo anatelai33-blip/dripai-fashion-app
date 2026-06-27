@@ -1,8 +1,26 @@
 import { useApp } from '@/contexts/AppContext';
 import { ArrowLeft, Minus, Plus, Trash2, ShoppingBag, Home, Search, Heart, Camera } from 'lucide-react';
+import { ShopifyService } from '@/services';
 
 export function CartScreen() {
-  const { navigateTo, cart, removeFromCart, updateQuantity, clearCart, cartTotal, cartCount } = useApp();
+  const { navigateTo, cart, removeFromCart, updateQuantity, clearCart, cartTotal, cartCount, user } = useApp();
+
+  const handleProceedToCheckout = async () => {
+    if (!user || cart.length === 0) return;
+
+    try {
+      const lineItems = cart.map(item => ({
+        variantId: item.product.variants[0].id, // Assuming first variant for simplicity
+        quantity: item.quantity
+      }));
+      const checkout = await ShopifyService.createCheckout(lineItems);
+      window.location.href = checkout.webUrl;
+    } catch (error) {
+      console.error('Error creating Shopify checkout:', error);
+      // Optionally, show an error message to the user
+    }
+  };
+
 
   return (
     <div className="min-h-screen bg-cream-light pb-20">
@@ -130,7 +148,10 @@ export function CartScreen() {
                 </div>
               </div>
 
-              <button className="w-full mt-6 py-4 bg-gold text-white font-semibold rounded-xl hover:bg-gold-light transition-colors">
+              <button 
+                onClick={handleProceedToCheckout}
+                className="w-full mt-6 py-4 bg-gold text-white font-semibold rounded-xl hover:bg-gold-light transition-colors"
+              >
                 Proceed to Checkout
               </button>
             </div>

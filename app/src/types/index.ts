@@ -14,6 +14,7 @@ export interface Product {
   shippingInfo?: string;
   inStock: boolean;
   tryOnEnabled: boolean;
+  variants: { id: string; title: string; price: number; available: boolean }[];
 }
 
 export interface CartItem {

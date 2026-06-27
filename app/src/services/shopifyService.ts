@@ -223,7 +223,8 @@ export class ShopifyService {
       colors: colors.length > 0 ? colors : [{ name: 'Default', hex: '#cccccc' }],
       description: shopifyProduct.description,
       inStock: variants.some((v: any) => v.available),
-      tryOnEnabled
+      tryOnEnabled,
+      variants: variants
     };
   }
 
