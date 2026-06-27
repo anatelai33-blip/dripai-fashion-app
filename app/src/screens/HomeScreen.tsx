@@ -1,6 +1,6 @@
 import { useState, useMemo } from 'react';
 import { useApp } from '@/contexts/AppContext';
-import { products } from '@/data/products';
+// Using products from AppContext
 import { Search, ShoppingBag, Heart, Home, Camera, Sparkles, Shirt, Trophy, Users, Scissors, Wand2, Radio, ChevronRight } from 'lucide-react';
 
 const FEATURES = [
@@ -14,7 +14,12 @@ const FEATURES = [
 ] as const;
 
 export function HomeScreen() {
-  const { navigateTo, toggleFavorite, isFavorite, cartCount } = useApp();
+  const { navigateTo, toggleFavorite, isFavorite, cartCount, products, fetchProducts } = useApp();
+  
+  useState(() => {
+    fetchProducts();
+  });
+
   const [selectedCategory, setSelectedCategory] = useState('All');
   const [searchQuery, setSearchQuery] = useState('');
 
